@@ -43,17 +43,13 @@ import { StyleSheet, Text, View } from 'react-native';
 // })
 
 // Check flex property
-// class FlexProperty extends Component {
-//   render() {
-//     return (
-//       <View style={styles.container}>
-//         <View style={[styles.box, {flex: 1}]}/>
-//         <View style={[styles.box, {flex: 2}]}/>
-//         <View style={[styles.box, {flex: 1}]}/>
-//       </View>
-//     )
-//   }
-// }
+// const FlexProperty = props => (
+//   <View style={styles.container}>
+//     <View style={[styles.box, {flex: 1}]}/>
+//     <View style={[styles.box, {flex: 2}]}/>
+//     <View style={[styles.box, {flex: 1}]}/>
+//   </View>
+// )
 
 // const styles = StyleSheet.create({
 //   container: {
@@ -71,33 +67,39 @@ import { StyleSheet, Text, View } from 'react-native';
 // })
 
 // Check individual align items
-class IndividualAlign extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.box}/>
-        <View style={[styles.box, {alignSelf: 'flex-start'}]}/>
-        <View style={styles.box}/>
-      </View>
-    )
-  }
-}
+// const IndividualAlign = props => (
+//     <View style={styles.container}>
+//       <View style={styles.box}/>
+//       <View style={[styles.box, {alignSelf: 'flex-start'}]}/>
+//       <View style={styles.box}/>
+//     </View>
+// )
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  box: {
-    width: 50,
-    height: 50,
-    backgroundColor: '#e76e63',
-    margin: 10,
-  }
-})
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     flexDirection: 'row',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//   },
+//   box: {
+//     width: 50,
+//     height: 50,
+//     backgroundColor: '#e76e63',
+//     margin: 10,
+//   }
+// })
+
+// Check flex demo
+const FlexDemo = props => (
+  <View style={{flex: 1}}>
+    <View style={{flex: 2, backgroundColor: 'red'}} />
+    <View style={{flex: 1, backgroundColor: 'green'}} />
+    <View style={{flex: 3, backgroundColor: 'blue'}} />
+  </View>
+);
 
 // export default FlexboxExamples;
 // export default FlexProperty;
-export default IndividualAlign;
+// export default IndividualAlign;
+export default FlexDemo;
